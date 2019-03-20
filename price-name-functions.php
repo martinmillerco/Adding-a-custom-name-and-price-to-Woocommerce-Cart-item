@@ -12,7 +12,7 @@ function add_funky_meta($cart_object)
                 $value['data']->set_price($discPrice); // This is the line that does the work of setting the price before adding it to the cart.
             }
 
-            if (strpos($origName, 'Test Text') !== false) { //An initial check to see if your product name qualifies for the change.
+            if (strpos($origName, 'Test Text') !== false) { //An initial check to see if the product name qualifies for the change.
                 if ($value['variation']['Sample'] == 'Yes') { // This is a secondary price adjustment.
                     $value['data']->set_price(5); // New price set here because the item was marked as a sample.
                     $origName = str_replace('Test Text', '', $origName); // This removes a part of the name. 
